@@ -51,7 +51,7 @@ public class Main {
 
     public static int randomInt(){
         Random generator = new Random(System.nanoTime());
-        return generator.nextInt()%51;
+        return generator.nextInt()%6;
     }
 
     public static void printList(ArrayList<Fraction> list){

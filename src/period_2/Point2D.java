@@ -25,18 +25,18 @@ public class Point2D extends Point {
     }
 
     @Override
+    public Point2D getSymmetry() {
+        return new Point2D(-x, -y);
+    }
+
+    @Override
     public boolean equals(Object p) {
-        if (p instanceof Point2D){
+        if (p instanceof Point2D) {
             Point2D p2d = (Point2D) p;
             return x == p2d.getX() && y == p2d.getY();
         }
 
         return false;
-    }
-
-    @Override
-    public Point2D getSymmetry() {
-        return new Point2D(-x, -y);
     }
 
     @Override

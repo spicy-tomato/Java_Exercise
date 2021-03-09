@@ -13,31 +13,31 @@ public class Point3D extends Point2D {
         return z;
     }
 
-    //  @formatter:off
     @Override
     public double distance(Point p) {
         Point3D p3d = (Point3D) p;
+        //  @formatter:off
         return Math.sqrt(
                 Math.pow(getX() - p3d.getX(), 2) +
                 Math.pow(getY() - p3d.getY(), 2) +
                 Math.pow(z - p3d.getZ(), 2)
+        //  @formatter:on
         );
-    }
-    //  @formatter:on
-
-    @Override
-    public boolean equals(Object p) {
-        if (p instanceof Point3D){
-            Point3D p3d = (Point3D) p;
-            return getX() == p3d.getX() && getY() == p3d.getY() && z == p3d.getZ();
-        }
-
-        return false;
     }
 
     @Override
     public Point3D getSymmetry() {
         return new Point3D(-getX(), -getY(), -z);
+    }
+
+    @Override
+    public boolean equals(Object p) {
+        if (p instanceof Point3D) {
+            Point3D p3d = (Point3D) p;
+            return getX() == p3d.getX() && getY() == p3d.getY() && z == p3d.getZ();
+        }
+
+        return false;
     }
 
     @Override
