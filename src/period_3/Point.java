@@ -53,6 +53,16 @@ public class Point implements Shape {
             return distance(circle);
         }
 
+        if (shape instanceof Line) {
+            Line line = (Line) shape;
+            return line.distance(this);
+        }
+
+        if (shape instanceof LineSegment) {
+            LineSegment lineSegment = (LineSegment) shape;
+            return lineSegment.distance(this);
+        }
+
         return 0;
     }
 
@@ -80,5 +90,13 @@ public class Point implements Shape {
     @Override
     public String toString() {
         return String.format("Điểm (%.1f, %.1f)", x, y);
+    }
+
+    public Point getSymmetry(Point point) {
+        return new Point(2*point.getX() - x, 2*point.getY() - y);
+    }
+
+    public Point getSymmetry() {
+        return new Point(-x, -y);
     }
 }

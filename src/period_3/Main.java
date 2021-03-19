@@ -11,7 +11,7 @@ public class Main {
         list.add(new Point(1, 2));
         list.add(new Circle(3, 4, 5));
         list.add(new Line(1, -1, 0));
-        list.add(new Rectangle(-1, -2, 3, 5));
+//        list.add(new Rectangle(-1, -2, 3, 5));
 
         System.out.println("Danh sách các hình vừa nhập:");
         for (var item : list){

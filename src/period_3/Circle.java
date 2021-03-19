@@ -53,6 +53,16 @@ public class Circle implements Shape {
             return distance(circle);
         }
 
+        if (shape instanceof Line) {
+            Line line = (Line) shape;
+            return line.distance(this);
+        }
+
+        if (shape instanceof LineSegment) {
+            LineSegment lineSegment = (LineSegment) shape;
+            return lineSegment.distance(this);
+        }
+
         return 0;
     }
 
