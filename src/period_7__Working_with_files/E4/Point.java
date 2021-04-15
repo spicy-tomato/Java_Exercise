@@ -1,7 +1,5 @@
 package period_7__Working_with_files.E4;
 
-import java.util.ArrayList;
-import java.util.List;
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
 
@@ -20,7 +18,7 @@ public class Point {
         Pattern p = Pattern.compile("-?\\d+(\\.\\d+)?,-?\\d+(\\.\\d+)?");
         Matcher m = p.matcher(string);
 
-        String results = null;
+        String results = "";
 
         while (m.find()) {
             if (m.group(0) != null) {
@@ -31,22 +29,12 @@ public class Point {
             }
         }
 
-//        System.out.println(results);
-
         String[] str = results.split(",");
 
         double x = Double.parseDouble(str[0]);
         double y = Double.parseDouble(str[1]);
 
         return new Point(x, y);
-    }
-
-    public double getX() {
-        return x;
-    }
-
-    public double getY() {
-        return y;
     }
 
     public double distance(Point p) {
