@@ -1,0 +1,2 @@
+Number of points: 4
+Total distance: 28.165889049335306

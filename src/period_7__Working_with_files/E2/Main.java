@@ -1,4 +1,4 @@
-package period_7__Working_with_files.Bai2;
+package period_7__Working_with_files.E2;
 
 import java.io.File;
 

@@ -1,4 +1,4 @@
-package period_7__Working_with_files.Bai1;
+package period_7__Working_with_files.E1;
 
 import java.io.File;
 import java.io.FileNotFoundException;
@@ -8,7 +8,7 @@ import java.util.Scanner;
 
 public class Main {
 
-    private static final String filePath = "D:/Projects/Java/Exercise/src/period_7__Working_with_files/Bai1/example.txt";
+    private static final String filePath = "D:/Projects/Java/Exercise/src/period_7__Working_with_files/E3/example.txt";
 
     private static final File file = new File(filePath);
     private static final Scanner inputScanner = new Scanner(System.in);
